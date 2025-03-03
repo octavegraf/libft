@@ -6,9 +6,11 @@
 /*   By: ocgraf <ocgraf@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/03 09:54:53 by ocgraf            #+#    #+#             */
-/*   Updated: 2025/03/03 10:01:26 by ocgraf           ###   ########.fr       */
+/*   Updated: 2025/03/03 10:24:29 by ocgraf           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 size_t	ft_strlen(const char *s)
 {
