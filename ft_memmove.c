@@ -6,7 +6,7 @@
 /*   By: ocgraf <ocgraf@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/03 09:54:53 by ocgraf            #+#    #+#             */
-/*   Updated: 2025/03/04 13:16:16 by ocgraf           ###   ########.fr       */
+/*   Updated: 2025/03/04 17:51:39 by ocgraf           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,19 +26,12 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 		while (i > 0)
 		{
 			i--;
-			dest[i] = source[i];  
+			dest[i] = source[i];
 		}
+		return (dst);
 	}
 	else
-	{
-		i = 0;
-		while (i < len)
-		{
-			dest[i] = source[i];
-			i++;
-		}
-	}
-	return (dst);
+		return (ft_memcpy(dst, src, len));
 }
 
 /*#include <memory.h>
