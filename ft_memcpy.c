@@ -6,28 +6,27 @@
 /*   By: ocgraf <ocgraf@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/03 09:54:53 by ocgraf            #+#    #+#             */
-/*   Updated: 2025/03/03 18:10:40 by ocgraf           ###   ########.fr       */
+/*   Updated: 2025/03/04 09:27:20 by ocgraf           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_memcpy(void *restrict dst, const void *restrict src, size_t n)
+void	*ft_memcpy(void *restrict dst, const void *restrict src, size_t n)
 {
-	int		i;
-	int		j;
+	size_t	i;
 	char	*dest;
 	char	*source;
 
-	dest = (char *) dst;
-	source = (char *) src;
+	dest = (char *)dst;
+	source = (char *)src;
 	i = 0;
-	j = n;
-	while (i < j)
+	while (i < n)
 	{
 		dest[i] = source[i];
 		i++;
 	}
+	return (dst);
 }
 /* #include <string.h>
 #include <stdio.h>
