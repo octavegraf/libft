@@ -6,5 +6,5 @@
 		"__config": "c",
 		"_types.h": "c"
 	},
-	"C_Cpp.default.compilerPath": "/usr/bin/gcc"
+	"C_Cpp.default.compilerPath": "/usr/bin/clang"
 }
