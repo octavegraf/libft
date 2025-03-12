@@ -6,7 +6,7 @@
 /*   By: ocgraf <ocgraf@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/03 10:09:54 by ocgraf            #+#    #+#             */
-/*   Updated: 2025/03/11 17:21:35 by ocgraf           ###   ########.fr       */
+/*   Updated: 2025/03/12 09:38:04 by ocgraf           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define LIBFT_H
 # include <stdlib.h>
 
+int		ft_check(const char *haystack, const char *needle);
 int		ft_isalnum(int c);
 int		ft_isalpha(int c);
 int		ft_isascii(int c);
