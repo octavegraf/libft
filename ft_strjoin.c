@@ -6,98 +6,33 @@
 /*   By: ocgraf <ocgraf@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/13 11:59:47 by ocgraf            #+#    #+#             */
-/*   Updated: 2025/03/13 11:59:56 by ocgraf           ###   ########.fr       */
+/*   Updated: 2025/03/13 12:18:42 by ocgraf           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-unsigned int	size_tabtab(int size, char **strs)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
-	int				i;
-	int				j;
-	unsigned int	count;
+	char	*s1s2;
+	size_t	size;
+	size_t	i;
 
+	size = ft_strlen(s1) + ft_strlen(s2);
+	s1s2 = malloc((size + 1) * sizeof(char));
+	if (!s1s2)
+		return (NULL);
 	i = 0;
-	count = 0;
-	while (i < size)
+	while (i < ft_strlen(s1))
 	{
-		j = 0;
-		while (strs[i][j])
-		{
-			j++;
-			count++;
-		}
+		s1s2[i] = s1[i];
 		i++;
 	}
-	return (count);
-}
-
-unsigned int	size_sep(char *sep)
-{
-	unsigned int	i;
-
-	i = 0;
-	while (sep[i])
-		i++;
-	return (i);
-}
-
-char	*add_sep(char *result, char *sep, unsigned int count)
-{
-	unsigned int	j;
-
-	j = 0;
-	while (sep[j])
+	while ((i - ft_strlen(s1)) < ft_strlen(s2))
 	{
-		result[count] = sep[j];
-		j++;
-		count++;
-	}
-	return (result);
-}
-
-
-char	*join_copy(int size, char **strs, char *sep, char *result)
-{
-	int				i;
-	unsigned int	j;
-	unsigned int	count;
-
-	i = 0;
-	count = 0;
-	while (i < size)
-	{
-		j = 0;
-		while (strs[i][j])
-		{
-			result[count] = strs[i][j];
-			j++;
-			count++;
-		}
-		j = 0;
-		if (i < size - 1)
-		{
-			result = add_sep(result, sep, count);
-			count += size_sep(sep);
-		}
+		s1s2[i] = s2[i - ft_strlen(s1)];
 		i++;
 	}
-	result[i] = '\0';
-	return (result);
-}
-
-char	*ft_strjoin(int size, char **strs, char *sep)
-{
-	char			*result;
-	unsigned int	size_strs_sep;
-
-	if (size <= 0)
-		return (0);
-	size_strs_sep = size_tabtab(size, strs) + (size_sep(sep) * (size - 1));
-	result = malloc(sizeof(char) * (size_strs_sep + 1));
-	if (!result)
-		return (0);
-	result = join_copy(size, strs, sep, result);
-	return (result);
+	s1s2[i] = '\0';
+	return (s1s2);
 }
