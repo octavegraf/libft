@@ -4,7 +4,9 @@
 		"libft.h": "c",
 		"stdlib.h": "c",
 		"__config": "c",
-		"_types.h": "c"
+		"_types.h": "c",
+		"limits.h": "c",
+		"_null.h": "c"
 	},
 	"C_Cpp.default.compilerPath": "/usr/bin/clang"
 }
