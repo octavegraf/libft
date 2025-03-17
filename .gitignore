@@ -1,4 +1,7 @@
 a.out
 *.o
-.vscode
 # .git
+.vscode/*
+.vscode/c_cpp_properties.json
+.vscode/settings.json
+.vscode/time_log.json
