@@ -6,7 +6,7 @@
 /*   By: ocgraf <ocgraf@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/18 18:34:04 by ocgraf            #+#    #+#             */
-/*   Updated: 2025/03/18 18:55:09 by ocgraf           ###   ########.fr       */
+/*   Updated: 2025/03/18 20:06:58 by ocgraf           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,5 +15,5 @@
 void	ft_lstadd_front(t_list **lst, t_list *new)
 {
 	new->next = *lst;
-	*lst = &new;
+	*lst = new;
 }
