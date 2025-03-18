@@ -6,7 +6,7 @@
 /*   By: ocgraf <ocgraf@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/03 10:09:54 by ocgraf            #+#    #+#             */
-/*   Updated: 2025/03/18 19:59:31 by ocgraf           ###   ########.fr       */
+/*   Updated: 2025/03/18 21:44:18 by ocgraf           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,7 @@ size_t	ft_strlcat(char *restrict dst, const char *restrict src,
 size_t	ft_strlcpy(char *restrict dst, const char *restrict src,
 			size_t dstsize);
 void	ft_bzero(void *s, size_t n);
+void	ft_lstadd_back(t_list **lst, t_list *new);
 void	ft_lstadd_front(t_list **lst, t_list *new);
 void	ft_putchar_fd(char c, int fd);
 void	ft_putendl_fd(char *s, int fd);
