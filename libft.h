@@ -6,7 +6,7 @@
 /*   By: ocgraf <ocgraf@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/03 10:09:54 by ocgraf            #+#    #+#             */
-/*   Updated: 2025/03/19 15:46:20 by ocgraf           ###   ########.fr       */
+/*   Updated: 2025/03/29 09:40:25 by ocgraf           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,6 +50,7 @@ void	ft_putendl_fd(char *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
 void	ft_putstr_fd(char *s, int fd);
 void	ft_striteri(char *s, void (*f)(unsigned int, char*));
+char	*ft_strnstr(const char *haystack, const char *needle, size_t len);
 char	*ft_itoa(int n);
 char	*ft_strchr(const char *s, int c);
 char	*ft_strdup(const char *s1);
