@@ -6,12 +6,13 @@
 /*   By: ocgraf <ocgraf@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/03 10:09:54 by ocgraf            #+#    #+#             */
-/*   Updated: 2025/03/31 11:44:43 by ocgraf           ###   ########.fr       */
+/*   Updated: 2025/03/31 11:47:18 by ocgraf           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_BONUS_H
 # define LIBFT_BONUS_H
+# include "libft.h"
 # include <stdlib.h>
 # include <limits.h> 
 # include <unistd.h>
