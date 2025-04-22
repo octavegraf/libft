@@ -17,7 +17,7 @@ BONUS =	ft_lstadd_back_bonus.c ft_lstadd_front_bonus.c ft_lstclear_bonus.c \
 BONUSES =	$(addprefix $(DIR)/, $(BONUS))
 NAME	= libft.a
 CC		= gcc
-CFLAGS	= -Wall -Wextra -Werror -g3
+CFLAGS	= -Wall -Wextra -Werror
 HEADER	= libft.h
 
 OBJ		= $(SRCS:.c=.o)

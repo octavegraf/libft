@@ -6,7 +6,7 @@
 /*   By: ocgraf <ocgraf@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/19 10:41:59 by ocgraf            #+#    #+#             */
-/*   Updated: 2025/03/31 11:46:41 by ocgraf           ###   ########.fr       */
+/*   Updated: 2025/04/22 18:08:35 by ocgraf           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	t_list	*temp;
 
 	new = ft_lstnew(f(lst->content));
+	ptr = NULL;
 	*ptr = new;
 	temp = lst->next;
 	ft_lstdelone(lst, del);
