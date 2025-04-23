@@ -15,8 +15,8 @@ CC		= gcc
 CFLAGS	= -Wall -Wextra -Werror
 HEADER	= libft.h
 
-OBJ		= $(SRCS:.c=.o)
-OBJ_B	= $(BONUSES:.c=.o)
+OBJ		= $(SRC:.c=.o)
+OBJ_B	= $(BONUS:.c=.o)
 
 all: $(NAME)
 
