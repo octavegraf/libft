@@ -6,7 +6,7 @@
 /*   By: ocgraf <ocgraf@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/12 09:54:06 by ocgraf            #+#    #+#             */
-/*   Updated: 2025/03/12 10:22:29 by ocgraf           ###   ########.fr       */
+/*   Updated: 2025/04/23 16:15:25 by ocgraf           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,12 +21,12 @@ int	ft_atoi(const char *str)
 	i = 0;
 	minus = 1;
 	nb = 0;
-	while ((str[i] >= 7 && str[i] <= 13) || str[i] == ' ')
+	while ((str[i] >= 9 && str[i] <= 13) || str[i] == ' ')
 		i++;
 	if (str[i] == '+' || str[i] == '-')
 	{
 		if (str[i] == '-')
-			minus = -1;
+			minus *= -1;
 	}
 	while (str[i] >= '0' && str[i] <= '9')
 	{
