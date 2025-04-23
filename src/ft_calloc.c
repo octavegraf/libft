@@ -6,13 +6,13 @@
 /*   By: ocgraf <ocgraf@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/12 10:35:16 by ocgraf            #+#    #+#             */
-/*   Updated: 2025/04/22 18:00:20 by ocgraf           ###   ########.fr       */
+/*   Updated: 2025/04/23 13:37:34 by ocgraf           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	detect_overflow(size_t count, size_t size)
+/* int	detect_overflow(size_t count, size_t size)
 {
 	if (size > 0 && count > INT_MAX / size)
 	{
@@ -28,14 +28,12 @@ int	detect_overflow(size_t count, size_t size)
 		return (1);
 	}
 	return (0);
-}
+} */
 
 void	*ft_calloc(size_t count, size_t size)
 {
 	void	*ptr;
 
-	if (detect_overflow(count, size) == 1)
-		return (NULL);
 	ptr = malloc(count * size);
 	if (!ptr)
 		return (NULL);
