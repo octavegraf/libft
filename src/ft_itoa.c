@@ -6,7 +6,7 @@
 /*   By: ocgraf <ocgraf@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/15 14:00:13 by ocgraf            #+#    #+#             */
-/*   Updated: 2025/03/31 11:23:29 by ocgraf           ###   ########.fr       */
+/*   Updated: 2025/04/24 12:35:52 by ocgraf           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,11 +20,11 @@ char	*copy_numbers(int n, int l, char *number)
 	if (n < 0)
 	{
 		number[0] = '-';
-		ul = -n;
+		ul = n * -1;
 	}
 	number[l] = '\0';
 	l--;
-	while (ul != 0)
+	while (ul > 0)
 	{
 		number[l] = (ul % 10) + '0';
 		ul /= 10;
