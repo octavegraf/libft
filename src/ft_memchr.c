@@ -6,7 +6,7 @@
 /*   By: ocgraf <ocgraf@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/11 15:11:15 by ocgraf            #+#    #+#             */
-/*   Updated: 2025/04/24 12:45:21 by ocgraf           ###   ########.fr       */
+/*   Updated: 2025/04/24 15:35:39 by ocgraf           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {
-	size_t			i;
-	unsigned char	uc;
-	const char		*str;
+	size_t					i;
+	unsigned char			uc;
+	unsigned const char		*str;
 
 	if (n == 0)
 		return (NULL);
