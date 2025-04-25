@@ -6,7 +6,7 @@
 /*   By: ocgraf <ocgraf@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/14 15:27:59 by ocgraf            #+#    #+#             */
-/*   Updated: 2025/03/15 13:15:13 by ocgraf           ###   ########.fr       */
+/*   Updated: 2025/04/25 10:53:03 by ocgraf           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,8 @@ int	count_words(char const *s, char const *set)
 	words = 0;
 	while (s[i])
 	{
-		if ((i == 0 || ((is_in_charset(s[i - 1], set))
-					&& !is_in_charset(s[i], set))))
+		if ((((i == 0) || (is_in_charset(s[i - 1], set)))
+				&& (!is_in_charset(s[i], set))))
 			words++;
 		i++;
 	}
