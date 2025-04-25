@@ -6,7 +6,7 @@
 /*   By: ocgraf <ocgraf@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/03 10:09:54 by ocgraf            #+#    #+#             */
-/*   Updated: 2025/04/24 15:39:43 by ocgraf           ###   ########.fr       */
+/*   Updated: 2025/04/24 17:42:00 by ocgraf           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ int		ft_isdigit(int c);
 int		ft_isprint(int c);
 char	*ft_itoa(int n);
 void	*ft_memchr(const void *s, int c, size_t n);
-int		ft_memcmp(const char *s1, const char *s2, size_t n);
+int		ft_memcmp(const void *s1, const void *s2, size_t n);
 void	*ft_memcpy(void *dst, const void *src, size_t n);
 void	*ft_memmove(void *dst, const void *src, size_t len);
 void	*ft_memset(void *b, int c, size_t len);
