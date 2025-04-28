@@ -6,11 +6,20 @@
 /*   By: ocgraf <ocgraf@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/14 15:27:59 by ocgraf            #+#    #+#             */
-/*   Updated: 2025/04/28 17:52:31 by ocgraf           ###   ########.fr       */
+/*   Updated: 2025/04/28 18:28:11 by ocgraf           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+int	is_in_charset(char c, char const *set);
+
+void	free_everything(char **tabtab, int k)
+{
+	while (k > 0)
+		free(tabtab[--k]);
+	free(tabtab);
+}
 
 int	count_words(char const *s, char const *set)
 {
@@ -68,6 +77,8 @@ char	**ft_split(char const *s, char c)
 		while (s[i] && is_in_charset(s[i], &c))
 			i++;
 		tabtab[k] = cut_words(s + i, &c);
+		if (!tabtab[k])
+			return (free_everything(tabtab, k), NULL);
 		i += ft_strlen(tabtab[k]);
 		k++;
 	}
