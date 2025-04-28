@@ -6,7 +6,7 @@
 /*   By: ocgraf <ocgraf@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/18 09:41:37 by ocgraf            #+#    #+#             */
-/*   Updated: 2025/03/18 13:35:38 by ocgraf           ###   ########.fr       */
+/*   Updated: 2025/04/28 17:56:36 by ocgraf           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,13 +24,3 @@ void	ft_putendl_fd(char *s, int fd)
 	}
 	write(fd, "\n", 1);
 }
-
-/* #include <fcntl.h>
-
-int main(void)
-{
-	int fd = open("test.txt", O_RDWR | O_CREAT);
-	ft_putendl_fd("Ceci est un test.", fd);
-	close(fd);
-	return (0);
-} */

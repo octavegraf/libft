@@ -6,7 +6,7 @@
 /*   By: ocgraf <ocgraf@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/03 10:03:44 by ocgraf            #+#    #+#             */
-/*   Updated: 2025/03/03 11:05:21 by ocgraf           ###   ########.fr       */
+/*   Updated: 2025/04/28 17:56:09 by ocgraf           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,17 +29,3 @@ void	*ft_memset(void *b, int c, size_t len)
 	}
 	return (b);
 }
-/* #include <stdio.h>
-#include <string.h>
-int main( void )
-{
-	char buffer[] = "This is a test of the memset function";
-	memset(buffer, '*', 4 );
-	printf( "Original:  %s\n", buffer);
-	char buffer2[] = "This is a test of the memset function";
-	ft_memset(buffer2, '*', 4 );
-	printf( "FT:  %s\n", buffer2);
-} */
-/* On convertit le int c en char afin de pouvoir remplacer len char 
-dans le pointer b
-Source du main : Microsoft Learn*/

@@ -6,7 +6,7 @@
 /*   By: ocgraf <ocgraf@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/15 15:18:52 by ocgraf            #+#    #+#             */
-/*   Updated: 2025/03/17 10:11:24 by ocgraf           ###   ########.fr       */
+/*   Updated: 2025/04/28 17:56:57 by ocgraf           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,15 +29,3 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	r[i] = '\0';
 	return (r);
 }
-
-/* char mapi(unsigned int i , char c)
-{
-	c += 1;
-	return (c);
-}
-
-int main(void)
-{
-	char *s = ft_strmapi("J'adore les pates", mapi);
-	return (0);
-} */
