@@ -6,7 +6,7 @@
 /*   By: ocgraf <ocgraf@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/18 19:57:30 by ocgraf            #+#    #+#             */
-/*   Updated: 2025/04/27 16:30:59 by ocgraf           ###   ########.fr       */
+/*   Updated: 2025/04/28 10:29:04 by ocgraf           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 
 t_list	*ft_lstlast(t_list *lst)
 {
+	if (!lst)
+		return (NULL);
 	while (lst->next)
 	{
 		lst = lst->next;
