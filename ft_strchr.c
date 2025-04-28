@@ -6,7 +6,7 @@
 /*   By: ocgraf <ocgraf@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/04 18:49:40 by ocgraf            #+#    #+#             */
-/*   Updated: 2025/04/25 10:18:09 by ocgraf           ###   ########.fr       */
+/*   Updated: 2025/04/28 17:42:17 by ocgraf           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ char	*ft_strchr(const char *s, int c)
 			return (str + i);
 		i++;
 	}
-	if (!c)
+	if (!(char)c)
 		return (str + i);
 	return (NULL);
 }
