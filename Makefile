@@ -1,3 +1,15 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: ocgraf <ocgraf@student.42.fr>              +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2025/04/28 13:22:17 by ocgraf            #+#    #+#              #
+#    Updated: 2025/04/28 13:22:17 by ocgraf           ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
 SRC =	ft_atoi.c ft_memchr.c ft_split.c ft_strncmp.c ft_bzero.c ft_memcmp.c \
 		ft_strchr.c ft_strnstr.c ft_calloc.c ft_memcpy.c ft_strdup.c \
 		ft_strrchr.c ft_isalnum.c ft_memmove.c ft_striteri.c ft_strtrim.c \
@@ -30,7 +42,7 @@ clean:
 fclean:		clean
 			rm -rf $(NAME)
 
-bonus			:	$(OBJS) $(OBJ_B)
-					@ar rcs $(NAME) $(OBJS) $(OBJ_B)
+bonus			:	$(OBJ) $(OBJ_B)
+					@ar rcs $(NAME) $(OBJ) $(OBJ_B)
 
 re:			fclean all
