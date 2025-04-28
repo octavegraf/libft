@@ -6,7 +6,7 @@
 /*   By: ocgraf <ocgraf@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/19 10:41:59 by ocgraf            #+#    #+#             */
-/*   Updated: 2025/04/27 16:31:00 by ocgraf           ###   ########.fr       */
+/*   Updated: 2025/04/28 13:42:49 by ocgraf           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,22 +14,15 @@
 
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-	t_list	**ptr;
-	t_list	*new;
-	t_list	*temp;
+	t_list	**new;
 
-	new = ft_lstnew(f(lst->content));
-	ptr = NULL;
-	*ptr = new;
-	temp = lst->next;
+	ft_lstiter(lst, (*f)(lst->content));
 	ft_lstdelone(lst, del);
-	lst = temp;
-	while (lst)
+	*new = ft_lstnew(lst->content);
+	while (lst->next)
 	{
-		ft_lstadd_back(ptr, ft_lstnew(f(lst->content)));
-		temp = lst->next;
-		ft_lstdelone(lst, del);
-		lst = temp;
+		ft_lstadd_back(new, lst);
+		lst = lst->next;
 	}
-	return (new);
+	return ((*new));
 }
