@@ -6,7 +6,7 @@
 #    By: ocgraf <ocgraf@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/04/28 13:22:17 by ocgraf            #+#    #+#              #
-#    Updated: 2025/04/29 14:07:41 by ocgraf           ###   ########.fr        #
+#    Updated: 2025/04/29 14:25:43 by ocgraf           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,7 +23,7 @@ BONUS =	ft_lstadd_back_bonus.c ft_lstadd_front_bonus.c ft_lstclear_bonus.c \
 		ft_lstmap_bonus.c ft_lstnew_bonus.c ft_lstsize_bonus.c
 
 NAME	= libft.a
-CC		= gcc
+CC		= cc
 CFLAGS	= -Wall -Wextra -Werror
 HEADER	= libft.h
 
@@ -46,3 +46,5 @@ bonus			:	$(OBJ) $(OBJ_B)
 					@ar rcs $(NAME) $(OBJ) $(OBJ_B)
 
 re:			fclean all
+
+.PHONY:		all clean fclean bonus re
