@@ -6,7 +6,7 @@
 /*   By: ocgraf <ocgraf@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/24 22:21:23 by ocgraf            #+#    #+#             */
-/*   Updated: 2025/05/24 22:24:13 by ocgraf           ###   ########.fr       */
+/*   Updated: 2025/05/27 11:16:53 by ocgraf           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,20 @@
 
 void	ft_putnbr(int nb)
 {
+	unsigned int	un_nb;
+
 	if (nb < 0)
 	{
 		ft_putchar('-');
-		nb = -nb;
+		un_nb = -nb;
 	}
-	if (nb >= 10)
+	else
+		un_nb = nb;
+	if (un_nb >= 10)
 	{
-		ft_putnbr(nb / 10);
-		nb %= 10;
+		ft_putnbr(un_nb / 10);
+		un_nb %= 10;
 	}
-	if (nb < 10)
-		ft_putchar(nb + '0');
+	if (un_nb < 10)
+		ft_putchar(un_nb + '0');
 }
