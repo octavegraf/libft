@@ -6,7 +6,7 @@
 /*   By: ocgraf <ocgraf@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/03 10:09:54 by ocgraf            #+#    #+#             */
-/*   Updated: 2025/05/27 09:21:45 by ocgraf           ###   ########.fr       */
+/*   Updated: 2025/05/27 09:35:18 by ocgraf           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,7 @@ void	ft_putchar(char c);
 void	ft_putchar_fd(char c, int fd);
 void	ft_putendl_fd(char *s, int fd);
 void	ft_putnbr(int nb);
+void	ft_putnbr_base(int nbr, char *base);
 void	ft_putnbr_fd(int n, int fd);
 void	ft_putstr(char *s);
 void	ft_putstr_fd(char *s, int fd);
@@ -56,6 +57,7 @@ char	*ft_strtrim(char const *s1, char const *set);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
 int		ft_tolower(int c);
 int		ft_toupper(int c);
+size_t	ft_unlen(unsigned int nb);
 
 typedef struct s_list
 {
