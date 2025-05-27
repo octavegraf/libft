@@ -6,15 +6,15 @@
 /*   By: ocgraf <ocgraf@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/25 15:38:44 by ocgraf            #+#    #+#             */
-/*   Updated: 2025/05/25 15:48:49 by ocgraf           ###   ########.fr       */
+/*   Updated: 2025/05/27 09:19:56 by ocgraf           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_intlen(long long int nb)
+size_t	ft_intlen(int nb)
 {
-	int	i;
+	size_t	i;
 
 	i = 0;
 	if (nb == 0)
