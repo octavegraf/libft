@@ -6,7 +6,7 @@
 /*   By: ocgraf <ocgraf@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/03 10:09:54 by ocgraf            #+#    #+#             */
-/*   Updated: 2025/05/25 15:43:24 by ocgraf           ###   ########.fr       */
+/*   Updated: 2025/05/27 09:21:45 by ocgraf           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,7 @@ void	ft_putnbr(int nb);
 void	ft_putnbr_fd(int n, int fd);
 void	ft_putstr(char *s);
 void	ft_putstr_fd(char *s, int fd);
+void	ft_putunnbr(unsigned int nb);
 char	**ft_split(char const *s, char c);
 char	*ft_strchr(const char *s, int c);
 char	*ft_strdup(const char *s1);
