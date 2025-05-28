@@ -6,7 +6,7 @@
 /*   By: ocgraf <ocgraf@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/27 09:34:10 by ocgraf            #+#    #+#             */
-/*   Updated: 2025/05/27 09:35:07 by ocgraf           ###   ########.fr       */
+/*   Updated: 2025/05/28 11:21:17 by ocgraf           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,10 +45,7 @@ void	ft_putnbr_base(int nbr, char *base)
 	if (ft_check_error(base, base_long) == 0)
 		return ;
 	if (nbr < 0)
-	{
-		write (1, "-", 1);
 		nbr_long = (unsigned long int)(-nbr);
-	}
 	else
 		nbr_long = nbr;
 	if (nbr_long >= base_long)
