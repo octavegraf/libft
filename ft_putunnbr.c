@@ -6,7 +6,7 @@
 /*   By: ocgraf <ocgraf@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/24 22:21:23 by ocgraf            #+#    #+#             */
-/*   Updated: 2025/05/27 09:21:09 by ocgraf           ###   ########.fr       */
+/*   Updated: 2025/06/02 14:26:49 by ocgraf           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,5 +20,5 @@ void	ft_putunnbr(unsigned int nb)
 		nb %= 10;
 	}
 	if (nb < 10)
-		ft_putunnbr(nb + '0');
+		ft_putchar(nb + '0');
 }

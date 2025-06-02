@@ -6,7 +6,7 @@
 /*   By: ocgraf <ocgraf@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/27 09:34:10 by ocgraf            #+#    #+#             */
-/*   Updated: 2025/05/28 15:46:54 by ocgraf           ###   ########.fr       */
+/*   Updated: 2025/06/02 15:01:07 by ocgraf           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,19 +36,14 @@ int	ft_check_error(char *base, unsigned long int base_long)
 	return (1);
 }
 
-void	ft_putnbr_base(int nbr, char *base)
+void	ft_putnbr_base(unsigned long long int nbr, char *base)
 {
-	unsigned long int	nbr_long;
-	unsigned long int	base_long;
+	unsigned int	base_long;
 
 	base_long = ft_strlen(base);
 	if (ft_check_error(base, base_long) == 0)
 		return ;
-	if (nbr < 0)
-		nbr_long = -(long)nbr;
-	else
-		nbr_long = nbr;
-	if (nbr_long >= base_long)
-		ft_putnbr_base(nbr_long / base_long, base);
-	ft_putchar(base[nbr_long % base_long]);
+	if (nbr >= base_long)
+		ft_putnbr_base(nbr / base_long, base);
+	ft_putchar(base[nbr % base_long]);
 }
