@@ -6,7 +6,7 @@
 /*   By: ocgraf <ocgraf@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/03 10:09:54 by ocgraf            #+#    #+#             */
-/*   Updated: 2025/05/24 22:24:33 by ocgraf           ###   ########.fr       */
+/*   Updated: 2025/06/08 14:24:49 by ocgraf           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,6 +52,7 @@ char	*ft_strrchr(const char *s, int c);
 int		ft_check(const char *haystack, const char *needle, size_t len);
 char	*ft_strtrim(char const *s1, char const *set);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
+char	**ft_tab_add_row(char **tab, char *row);
 int		ft_tolower(int c);
 int		ft_toupper(int c);
 
