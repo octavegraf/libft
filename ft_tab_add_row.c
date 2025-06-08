@@ -6,21 +6,21 @@
 /*   By: ocgraf <ocgraf@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/08 14:01:36 by ocgraf            #+#    #+#             */
-/*   Updated: 2025/06/08 15:10:13 by ocgraf           ###   ########.fr       */
+/*   Updated: 2025/06/08 15:38:26 by ocgraf           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	**ft_tab_add_row(char **tab, char *row)
+void	ft_tab_add_row(char ***tab, char *row)
 {
 	char	**temp;
 	char	*line;
 	int		i;
 
 	i = 0;
-	if (tab)
-		while (tab[i])
+	if (*tab)
+		while (*tab[i])
 			i++;
 	line = ft_strdup(row);
 	if (!line)
@@ -29,16 +29,16 @@ char	**ft_tab_add_row(char **tab, char *row)
 	if (!temp)
 		return (free(line), NULL);
 	i = -1;
-	if (tab)
+	if (*tab)
 	{
-		while (tab[++i])
-			temp[i] = tab[i];
+		while (*tab[++i])
+			temp[i] = *tab[i];
 	}
 	else
 		i = 0;
 	temp[i] = line;
 	temp[++i] = NULL;
-	return (free(tab), temp);
+	*tab = temp;
 }
 
 // Adding row to table and NULL terminating it
