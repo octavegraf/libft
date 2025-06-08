@@ -1,39 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_substr.c                                        :+:      :+:    :+:   */
+/*   ft_intlen_base.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ocgraf <ocgraf@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/03/12 14:24:17 by ocgraf            #+#    #+#             */
-/*   Updated: 2025/05/30 16:35:23 by ocgraf           ###   ########.fr       */
+/*   Created: 2025/05/25 15:38:44 by ocgraf            #+#    #+#             */
+/*   Updated: 2025/06/02 15:02:17 by ocgraf           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_substr(char const *s, unsigned int start, size_t len)
+size_t	ft_intlen_base(unsigned long long int nb, char *base)
 {
-	char			*subs;
-	size_t			i;
-	size_t			size_len;
+	size_t				i;
+	size_t				base_len;
 
-	if (!s)
-		return (NULL);
-	size_len = ft_strlen(s);
-	if (start >= size_len)
-		return (ft_strdup(""));
-	if (len > size_len - start)
-		len = size_len - start;
-	subs = malloc((len + 1) * sizeof(char));
-	if (!subs)
-		return (NULL);
-	i = 0;
-	while (i < len)
+	i = 1;
+	base_len = ft_strlen(base);
+	while (nb >= base_len)
 	{
-		subs[i] = s[start + i];
+		nb /= base_len;
 		i++;
 	}
-	subs[i] = '\0';
-	return (subs);
+	return (i);
 }

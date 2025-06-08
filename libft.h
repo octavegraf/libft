@@ -6,7 +6,7 @@
 /*   By: ocgraf <ocgraf@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/03 10:09:54 by ocgraf            #+#    #+#             */
-/*   Updated: 2025/06/08 14:24:49 by ocgraf           ###   ########.fr       */
+/*   Updated: 2025/06/08 14:54:16 by ocgraf           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,8 @@ int		ft_isalpha(int c);
 int		ft_isascii(int c);
 int		ft_isdigit(int c);
 int		ft_isprint(int c);
+size_t	ft_intlen(int nb);
+size_t	ft_intlen_base(unsigned long long int nb, char *base);
 char	*ft_itoa(int n);
 void	*ft_memchr(const void *s, int c, size_t n);
 int		ft_memcmp(const void *s1, const void *s2, size_t n);
@@ -34,9 +36,11 @@ void	ft_putchar(char c);
 void	ft_putchar_fd(char c, int fd);
 void	ft_putendl_fd(char *s, int fd);
 void	ft_putnbr(int nb);
+void	ft_putnbr_base(unsigned long long int nbr, char *base);
 void	ft_putnbr_fd(int n, int fd);
 void	ft_putstr(char *s);
 void	ft_putstr_fd(char *s, int fd);
+void	ft_putunnbr(unsigned int nb);
 char	**ft_split(char const *s, char c);
 char	*ft_strchr(const char *s, int c);
 char	*ft_strdup(const char *s1);
@@ -55,6 +59,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len);
 char	**ft_tab_add_row(char **tab, char *row);
 int		ft_tolower(int c);
 int		ft_toupper(int c);
+size_t	ft_unlen(unsigned int nb);
 
 typedef struct s_list
 {

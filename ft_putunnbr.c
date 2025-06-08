@@ -1,39 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_substr.c                                        :+:      :+:    :+:   */
+/*   ft_putunnbr.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ocgraf <ocgraf@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/03/12 14:24:17 by ocgraf            #+#    #+#             */
-/*   Updated: 2025/05/30 16:35:23 by ocgraf           ###   ########.fr       */
+/*   Created: 2025/05/24 22:21:23 by ocgraf            #+#    #+#             */
+/*   Updated: 2025/06/02 14:26:49 by ocgraf           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_substr(char const *s, unsigned int start, size_t len)
+void	ft_putunnbr(unsigned int nb)
 {
-	char			*subs;
-	size_t			i;
-	size_t			size_len;
-
-	if (!s)
-		return (NULL);
-	size_len = ft_strlen(s);
-	if (start >= size_len)
-		return (ft_strdup(""));
-	if (len > size_len - start)
-		len = size_len - start;
-	subs = malloc((len + 1) * sizeof(char));
-	if (!subs)
-		return (NULL);
-	i = 0;
-	while (i < len)
+	if (nb >= 10)
 	{
-		subs[i] = s[start + i];
-		i++;
+		ft_putunnbr(nb / 10);
+		nb %= 10;
 	}
-	subs[i] = '\0';
-	return (subs);
+	if (nb < 10)
+		ft_putchar(nb + '0');
 }
