@@ -6,7 +6,7 @@
 /*   By: ocgraf <ocgraf@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/08 14:01:36 by ocgraf            #+#    #+#             */
-/*   Updated: 2025/06/09 15:58:44 by ocgraf           ###   ########.fr       */
+/*   Updated: 2025/06/09 16:29:55 by ocgraf           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,11 +33,11 @@ void	ft_tab_add_row(char ***tab, char *row)
 	{
 		while ((*tab)[++i])
 			temp[i] = (*tab)[i];
+		i--;
 	}
-	else
-		i = 0;
-	temp[i] = line;
+	temp[++i] = line;
 	temp[++i] = NULL;
+	free(*tab);
 	*tab = temp;
 }
 
