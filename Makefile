@@ -15,6 +15,9 @@ all: $(NAME)
 $(NAME): $(OBJECTS)
 	ar rcs $(NAME) $(OBJECTS)
 
+bonus: $(OBJECTS) $(OBJECTS_BONUS)
+	ar rcs $(NAME) $(OBJECTS) $(OBJECTS_BONUS)
+
 %.o: %.c $(HEADER)
 	$(CC) $(CFLAGS) $(INCLUDES) -c $< -o $@
 
