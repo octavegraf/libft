@@ -6,7 +6,7 @@
 /*   By: ocgraf <ocgraf@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/08 14:01:36 by ocgraf            #+#    #+#             */
-/*   Updated: 2025/06/08 15:38:26 by ocgraf           ###   ########.fr       */
+/*   Updated: 2025/06/09 14:29:12 by ocgraf           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ void	ft_tab_add_row(char ***tab, char *row)
 			i++;
 	line = ft_strdup(row);
 	if (!line)
-		return (NULL);
+		return ;
 	temp = malloc(sizeof(char *) * (i + 2));
 	if (!temp)
 		return (free(line), NULL);
