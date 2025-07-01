@@ -6,7 +6,7 @@
 /*   By: ocgraf <ocgraf@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/14 11:21:27 by ocgraf            #+#    #+#             */
-/*   Updated: 2025/03/14 12:39:13 by ocgraf           ###   ########.fr       */
+/*   Updated: 2025/07/01 10:49:49 by ocgraf           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,8 @@ char	*ft_strtrim(char const *s1, char const *set)
 	char	*trim;
 
 	i = 0;
+	if (!s1 || !set)
+		return (NULL);
 	while ((is_in_charset(s1[i], set) == 1) && s1[i])
 		i++;
 	start = i;
@@ -41,15 +43,12 @@ char	*ft_strtrim(char const *s1, char const *set)
 	while ((is_in_charset(s1[i], set) == 1) && i > start)
 		i--;
 	end = i + 1;
-	trim = malloc(((end - start) + 1) * sizeof(char));
+	trim = (char *)ft_calloc((end - start) + 1, sizeof(char));
 	if (!trim)
 		return (NULL);
-	i = 0;
-	while (i < (end - start))
-	{
+	i = -1;
+	while (++i < (end - start))
 		trim[i] = s1[start + i];
-		i++;
-	}
 	trim[i] = '\0';
 	return (trim);
 }
