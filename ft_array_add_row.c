@@ -6,39 +6,42 @@
 /*   By: ocgraf <ocgraf@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/08 14:01:36 by ocgraf            #+#    #+#             */
-/*   Updated: 2025/06/09 16:29:55 by ocgraf           ###   ########.fr       */
+/*   Updated: 2025/07/08 12:23:21 by ocgraf           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_tab_add_row(char ***tab, char *row)
+void	double_free(char **to_free)
 {
-	char	**temp;
-	char	*line;
-	int		i;
+	int	i;
 
-	i = 0;
-	if (*tab)
-		while ((*tab)[i])
-			i++;
-	line = ft_strdup(row);
-	if (!line)
-		return ;
-	temp = malloc(sizeof(char *) * (i + 2));
-	if (!temp)
-		return (free(line));
 	i = -1;
-	if (*tab)
-	{
-		while ((*tab)[++i])
-			temp[i] = (*tab)[i];
-		i--;
-	}
-	temp[++i] = line;
-	temp[++i] = NULL;
-	free(*tab);
-	*tab = temp;
+	if (!to_free)
+		return ;
+	while (to_free[++i])
+		free(to_free[i]);
+	free(to_free);
+}
+
+char	**ft_array_add_row(char **array, char *row)
+{
+	int		i;
+	char	**result;
+
+	if (!row)
+		return (double_free(array), NULL);
+	i = 0;
+	while (array && array[i])
+		i++;
+	result = ft_calloc(sizeof(char *), i + 2);
+	if (!result)
+		return (double_free(array), NULL);
+	i = -1;
+	while (array && array[++i])
+		result[i] = array[i];
+	result[i] = row;
+	return (double_free(array), result);
 }
 
 // Adding row to table and NULL terminating it

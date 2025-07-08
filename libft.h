@@ -6,7 +6,7 @@
 /*   By: ocgraf <ocgraf@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/03 10:09:54 by ocgraf            #+#    #+#             */
-/*   Updated: 2025/06/08 15:38:43 by ocgraf           ###   ########.fr       */
+/*   Updated: 2025/07/08 12:24:06 by ocgraf           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 # include <limits.h> 
 # include <unistd.h>
 
+char	**ft_array_add_row(char **array, char *row);
 int		ft_atoi(const char *str);
 void	ft_bzero(void *s, size_t n);
 void	*ft_calloc(size_t count, size_t size);
@@ -56,7 +57,6 @@ char	*ft_strrchr(const char *s, int c);
 int		ft_check(const char *haystack, const char *needle, size_t len);
 char	*ft_strtrim(char const *s1, char const *set);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
-void	ft_tab_add_row(char ***tab, char *row);
 int		ft_tolower(int c);
 int		ft_toupper(int c);
 size_t	ft_unlen(unsigned int nb);
