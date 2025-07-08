@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_tab_add_row.c                                   :+:      :+:    :+:   */
+/*   ft_array_add_row.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ocgraf <ocgraf@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/08 14:01:36 by ocgraf            #+#    #+#             */
-/*   Updated: 2025/07/08 12:23:21 by ocgraf           ###   ########.fr       */
+/*   Updated: 2025/07/08 15:40:22 by ocgraf           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,19 +28,28 @@ char	**ft_array_add_row(char **array, char *row)
 {
 	int		i;
 	char	**result;
+	char	*temp;
 
+	row = ft_strdup(row);
 	if (!row)
 		return (double_free(array), NULL);
 	i = 0;
 	while (array && array[i])
 		i++;
-	result = ft_calloc(sizeof(char *), i + 2);
+	result = malloc(sizeof(char *) * (i + 2));
 	if (!result)
-		return (double_free(array), NULL);
-	i = -1;
+		return (double_free(array), free(row), NULL);
+	if (array && *array)
+		i = -1;
 	while (array && array[++i])
-		result[i] = array[i];
+	{
+		temp = ft_strdup(array[i]);
+		if (!temp)
+			return (double_free(array), free(row), NULL);
+		result[i] = temp;
+	}
 	result[i] = row;
+	result[++i] = NULL;
 	return (double_free(array), result);
 }
 
