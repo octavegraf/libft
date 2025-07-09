@@ -6,7 +6,7 @@
 /*   By: ocgraf <ocgraf@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/08 14:01:36 by ocgraf            #+#    #+#             */
-/*   Updated: 2025/07/08 15:40:22 by ocgraf           ###   ########.fr       */
+/*   Updated: 2025/07/09 17:36:23 by ocgraf           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ char	**ft_array_add_row(char **array, char *row)
 	{
 		temp = ft_strdup(array[i]);
 		if (!temp)
-			return (double_free(array), free(row), NULL);
+			return (double_free(array), free(row), free(result), NULL);
 		result[i] = temp;
 	}
 	result[i] = row;
