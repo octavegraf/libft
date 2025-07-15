@@ -6,11 +6,11 @@
 /*   By: ocgraf <ocgraf@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/04 10:04:07 by ocgraf            #+#    #+#             */
-/*   Updated: 2025/07/04 10:27:08 by ocgraf           ###   ########.fr       */
+/*   Updated: 2025/07/15 16:53:05 by ocgraf           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-long long int	ft_atoi(const char *str)
+long long int	ft_atol(const char *str)
 {
 	int				i;
 	int				minus;
